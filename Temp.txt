@@ -1,3 +1,15 @@
-Sandeep gths is one
+Open Git Bash
+
+Directory should be C:\Myntra-latest
+
+
+git init
+git status
+
+git add -A
+
+Git commit -m "description of Change"
+Git push
+ 
 
 this is to be removed
