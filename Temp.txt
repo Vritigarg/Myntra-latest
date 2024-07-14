@@ -1,5 +1,13 @@
 Open Git Bash
 
+Change directory to below
+
+cd C:\Myntra-latest\
+
+check current directory by using command
+
+pwd
+
 Directory should be C:\Myntra-latest
 
 
