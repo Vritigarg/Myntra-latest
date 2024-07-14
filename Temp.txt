@@ -16,8 +16,9 @@ git status
 
 git add -A
 
-Git commit -m "description of Change"
-Git push
+git commit -m "description of Change"
+git push
  
 
-this is to be removed
+Go to your GitHub account and refresh to see if latest data is appearning
+
