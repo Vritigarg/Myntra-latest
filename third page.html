@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="myntra1.png" alt="Myntra Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Home & Living</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Studio</a></li>
+        </ul>
+        <div class="nav-search">
+            <input type="text" placeholder="Search for products brands and more...">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-icons">
+            <a href="#"><img src="profile.jpg" alt="Profile Icon"></a>
+            <a href="#"><img src="wishlist.jpg" alt="Wishlist Icon"></a>
+            <a href="#"><img src="cart.jpg" alt="Cart Icon"></a>
+        </div>
+    </nav>
+    <div class="container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <label><input type="radio" name="gender"> Men</label><br>
+            <label><input type="radio" name="gender"> Women</label><br>
+            <label><input type="radio" name="gender"> Boys</label><br>
+            <label><input type="radio" name="gender"> Girls</label>
+            <button class="clear-all">Clear All</button>
+            <div class="filter-section">
+                <h4>Category</h4>
+                <label><input type="checkbox" > Shirts (22244)</label>
+                <label><input type="checkbox" > Trousers (7719)</label>
+                <label><input type="checkbox"> Tshirts (4328)</label>
+                <label><input type="checkbox"> Blazers (1357)</label>
+                <label><input type="checkbox"> Formal Shoes (1084)</label>
+                <label><input type="checkbox"> Suits (1023)</label>
+                <label><input type="checkbox"> Sweaters (991)</label>
+                <label><input type="checkbox"> Sweatshirts (833)</label>
+            </div>
+            <div class="filter-section">
+                <h4>Brand</h4>
+                <label><input type="checkbox"> Roadster (7135)</label>
+                <label><input type="checkbox"> Indian Terrain (4671)</label>
+                <label><input type="checkbox"> HIGHLANDER (4668)</label>
+                <label><input type="checkbox" > Arrow (4415)</label>
+                <label><input type="checkbox"> WROGN (4093)</label>
+                <label><input type="checkbox"> U.S. Polo Assn. (3912)</label>
+                <label><input type="checkbox" > Van Heusen (3729)</label>
+            </div>
+            <div class="filter-section">
+                <h4>Price</h4>
+                <label><input type="checkbox"> Rs. 237 to Rs. 2178 (30881)</label>
+                <label><input type="checkbox"> Rs. 2178 to Rs. 4119 (3618)</label>
+                <label><input type="checkbox"> Rs. 4119 to Rs. 6060 (141)</label>
+                <label><input type="checkbox"> Rs. 6060 to Rs. 8001 (9)</label>
+            </div>
+        </aside>
+        <div class="main-content">
+            <header>
+                <div class="location-date">
+                    <span>Ooty, Karnatka</span>
+                    <span>15th July to 17th July</span>
+                    <button class="edit-button" onclick="navigateToPreviousPage()">Edit</button>
+                </div>
+                <div class="dates">
+                    <div class="date" id="date-15">
+                        <span class="day">Mon, Jul 15</span>
+                        <span class="temp">18° - 20°</span><p><b>Clear Sky</b> <img src="sunny.jpg" class="weather-icon"></p>
+                    </div>
+                    <div class="date" id="date-16">
+                        <span class="day">Tue, Jul 16</span>
+                        <span class="temp">16° - 18°</span><p><b>Heavy Showers</b> <img src="rainy1.jpg" class="weather-icon"></p>
+                    </div>
+                    <div class="date" id="date-17">
+                        <span class="day">Wed, Jul 17</span>
+                        <span class="temp">12° - 16°</span><p><b>Little Cooler</b> <img src="cold.jpg" class="weather-icon"></p>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="content">
+                    <div class="outfits">
+                        <div class="heading">
+                            <h2>Outfit Based On Your Travel Location</h2>
+                        </div>
+                        <div class="outfit" id="outfit-container">
+                            <!-- Initial set of product cards here -->
+                            <div class="product-card">
+                                <img src="ooty1.jpg" alt="Product Image" class="product-image">
+                                <div class="product-info">
+                                    <p><b>Here is a Cute Toy Train in Ooty</b></p>
+                                    <p>Incepted in the year 1899,  this toy train ride is a must-try for all the travellers.</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="ooty2.jpg" alt="Product Image" class="product-image">
+                                <div class="product-info">
+                                    <p><b>Dolphin's Nose</b></p>
+                                    <p>It is also a prize spot for trekking opportunities. </p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="ooty3.jpg" alt="Product Image" class="product-image">
+                                <div class="product-info">
+                                    <p><b>Tiger Hill: Amongst Popular places in Ooty</b></p>
+                                    <p>It is located at a distance of 6km from the main town and is replete with plenty treks.</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="ooty4.jpg" alt="Product Image" class="product-image">
+                                <div class="product-info">
+                                    <p><b>Ooty Rose Garden</b></p>
+                                    <p>The pride of Ooty lies in the Rose Garden, which belongs to an elite club of 35 rose gardens around the world . </p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="ooty5.jpg" alt="Product Image" class="product-image">
+                                <div class="product-info">
+                                    <p><b>Coonoor Tea Estate Ooty</b></p>
+                                    <p>The aroma of fresh tea leaves makes you feel proud of being a TEA LOVER,  & the gorgeous views allow you to enjoy nature at its best.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="more-outfits">
+                        <h2>Explore More Outfits and Cosmetics</h2>
+                        <div class="more-outfit-grid">
+                            <img src="outfit7.png" alt="Outfit 7">
+                            <img src="outfit8.png" alt="Outfit 8">
+                            <img src="outfit9.png" alt="Outfit 9">
+                            <img src="makeup.jpg" alt="Outfit 10">
+                            <img src="outfit11.png" alt="Outfit 11">
+                            <img src="outfit12.png" alt="Outfit 12">
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Information about Myntra.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <p>Contact details and help.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Links to social media.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

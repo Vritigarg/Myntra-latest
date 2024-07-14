@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Smart with Myntra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #fc4a1a, #f7b733);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .nav-logo img {
+            height: 50px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 1rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .nav-search {
+            flex-grow: 1;
+            margin: 0 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-search input {
+            width: 100%;
+            max-width: 600px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .search-btn {
+            background-color: #114175;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .nav-icons a {
+            margin-left: 1rem;
+            margin-right: 2rem;
+        }
+        .nav-icons img {
+            height: 24px;
+            width: 24px;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            box-sizing: border-box;
+            margin-top: 80px;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+        .header-center {
+            flex-grow: 1;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .header-center h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #fc4a1a;
+            margin: 0;
+        }
+        .title {
+            font-size: 64px;
+            font-weight: bold;
+            color: #333;
+        }
+        .subtitle {
+            font-size: 36px;
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            width: 80%;
+            background: linear-gradient(to bottom, #ff0075, #ff9900);
+            padding: 40px 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+            width: 50%;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 30px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .input-group .icon {
+            position: absolute;
+            top: 35px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .autocomplete-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .autocomplete-suggestion {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .autocomplete-suggestion:hover {
+            background-color: #f0f0f0;
+        }
+        .input-group-inline {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .input-group-inline .input-group {
+            flex: 1;
+            max-width: 30%;
+        }
+        .input-group-inline .input-group:hover {
+            transform: scale(1.1);
+        }
+        .input-group-inline .input-group:not(:last-child) {
+            margin-right: 20px;
+        }
+        .search-button {
+            background-color: #d32f2f;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 40%;
+            margin-top: 20px;
+        }
+        .search-button:hover {
+            transform: scale(1.1);
+        }
+        .season-selection {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+            background-image: url('coupon.jpg'); /* Set the background image here */
+            background-size: cover;
+            background-position: center;
+            padding: 40px 20px;
+            border-radius: 10px;
+        }
+        .season {
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .season img {
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            background: #eee;
+            transition: transform 0.3s;
+        }
+        .season img:hover {
+            transform: scale(1.1);
+        }
+        .season label {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="myntra1.png" alt="Myntra Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Home & Living</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Studio</a></li>
+        </ul>
+        <div class="nav-search">
+            <input type="text" placeholder="Search for products brands and more...">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-icons">
+            <a href="#"><img src="profile.jpg" alt="Profile Icon"></a>
+            <a href="#"><img src="wishlist.jpg" alt="Wishlist Icon"></a>
+            <a href="#"><img src="cart.jpg" alt="Cart Icon"></a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <div class="header-center">
+                <h1>Pack Perfect</h1>
+            </div>
+        </div>
+        <div class="title">TRAVEL SMART WITH MYNTRA</div>
+        <div class="subtitle">#WEATHER-PROOF YOUR WARDROBE</div>
+        <div class="form-container">
+            <div class="input-group">
+                <label for="location">Destination</label>
+                <input type="text" id="location" placeholder="Enter Destination">
+                <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+            </div>
+            <div class="input-group-inline">
+                <div class="input-group" style="margin-left: 150px;">
+                    <label for="from-date">From Date</label>
+                    <input type="date" id="from-date" placeholder="From Date">
+                </div>
+                <div class="input-group" style="margin-left: 20px; margin-right: 170px;">
+                    <label for="to-date">To Date</label>
+                    <input type="date" id="to-date" placeholder="To Date">
+                </div>
+            </div>
+            <button class="search-button" onclick="navigateToNextPage()">SEARCH</button>
+        </div>
+        <div class="season-selection">
+            <div class="season">
+                <img src="summer.jpg" alt="Summer" style="margin-right:200px;">
+
+            </div>
+            <div class="season">
+                <img src="winter.jpg" alt="Winter" style="margin-right:300px;">
+
+            </div>
+            <div class="season">
+                <img src="autumn.jpg" alt="Autumn" style = "margin-left:300px;">
+
+            </div>
+            <div class="season">
+                <img src="rainy.jpg" alt="Rainy" style="margin-left:200px;">
+            </div>
+        </div>
+    </div>
+    <script>
+        const citiesCountries = ["Kashmir","Switzerland","Ooty", "New Delhi", "Pondicherry", "Darjeeling", "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "Fort Worth", "Columbus", "San Francisco", "Charlotte", "Indianapolis", "Seattle", "Denver", "Washington", "Boston", "El Paso", "Detroit", "Nashville", "Portland", "Memphis", "Oklahoma City", "Las Vegas", "Louisville", "Baltimore", "Milwaukee", "Albuquerque", "Tucson", "Fresno", "Sacramento", "Kansas City", "Long Beach", "Mesa", "Atlanta", "Colorado Springs", "Virginia Beach", "Raleigh", "Omaha", "Miami", "Oakland", "Minneapolis", "Tulsa", "Wichita", "New Orleans"];
+
+        const locationInput = document.getElementById('location');
+        const autocompleteList = document.getElementById('autocomplete-list');
+
+        locationInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            autocompleteList.innerHTML = '';
+            if (query.length > 0) {
+                const filteredCitiesCountries = citiesCountries.filter(item => item.toLowerCase().startsWith(query));
+                filteredCitiesCountries.forEach(item => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.classList.add('autocomplete-suggestion');
+                    suggestionItem.innerText = item;
+                    suggestionItem.addEventListener('click', function() {
+                        locationInput.value = item;
+                        autocompleteList.innerHTML = '';
+                    });
+                    autocompleteList.appendChild(suggestionItem);
+                });
+            }
+        });
+
+        function navigateToNextPage() {
+            // Replace 'nextpage.html' with the actual URL of the next page
+            window.location.href = 'third page.html';
+        }
+    </script>
+</body>
+</html>
