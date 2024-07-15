@@ -151,6 +151,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
             </div>
+             <div class="product-card">
+                <img src="women cap.jpg" alt="Product Image" class="product-image">
+                <div class="product-info">
+                    <p><b>HAUTE SAUCE by Campus Sutra</b> HAUTE SAUCE by Campus Sutra Women Purple Floral Printed Bucket Hat</p>
+                    <p class="price">Rs. 455 <span class="original-price">Rs. 1897</span> (76% OFF)</p>
+                    <div class="wishlist-container">
+                        <button class="wishlist-btn">❤️ WISHLIST</button>
+                        <div class="wishlist-options">
+                            <p>Add to Wishlist</p>
+                            <p>View Wishlist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         `,
         '17': `
             <div class="product-card">
