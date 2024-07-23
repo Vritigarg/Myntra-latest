@@ -10,4 +10,5 @@
 #### We are Re-directed to the Next Page on which we have to first select your desired Location and then select the From Date and To Date and then finally click on the Search Button
 ![Screenshot 2024-07-23 210152](https://github.com/user-attachments/assets/cbf40570-825c-4683-b4ad-456f594ecfa3)
  #### Next for 3 Different Days based on the Weather Condition we are Recommended a Different Set of Outfits choices.
- 
+ #### For 15th July
+ ![Screenshot 2024-07-23 210213](https://github.com/user-attachments/assets/8672a563-58ed-4ef2-acaa-0d8376998d63)
