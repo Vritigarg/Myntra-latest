@@ -12,3 +12,5 @@
  #### Next for 3 Different Days based on the Weather Condition we are Recommended a Different Set of Outfits choices.
  #### For 15th July
  ![Screenshot 2024-07-23 210213](https://github.com/user-attachments/assets/8672a563-58ed-4ef2-acaa-0d8376998d63)
+#### For 16th July
+![Screenshot 2024-07-23 210247](https://github.com/user-attachments/assets/0eab4e9b-8ac8-45fa-851c-afd84f57fd5e)
