@@ -14,3 +14,5 @@
  ![Screenshot 2024-07-23 210213](https://github.com/user-attachments/assets/8672a563-58ed-4ef2-acaa-0d8376998d63)
 #### For 16th July
 ![Screenshot 2024-07-23 210247](https://github.com/user-attachments/assets/0eab4e9b-8ac8-45fa-851c-afd84f57fd5e)
+#### For 17th July
+![Screenshot 2024-07-23 210302](https://github.com/user-attachments/assets/48e1bdb6-9c12-462e-8abb-280887a44b23)
