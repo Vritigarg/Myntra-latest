@@ -7,4 +7,4 @@
 #### Introduced an XPLORE Button on the Myntra Website which Includes the Pack Perfect Button
 ![Screenshot 2024-07-23 210055](https://github.com/user-attachments/assets/d8c56025-ab55-4428-9fa3-a0ead6d4fde5)
 
-
+#### We are Re-directed to the Next Page on which we have to first select your desired Location and then select the From Date and To Date and then finally click on the Search Button
